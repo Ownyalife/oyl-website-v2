@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Own Ya Life</title>
+  <meta name="description" content="Privacy Policy for Own Ya Life." />
+  <meta name="robots" content="noindex" />
+
+  <!-- ─── FAVICON ─── -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <!-- ─── OPEN GRAPH ─── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Own Ya Life" />
+  <meta property="og:title" content="Privacy Policy | Own Ya Life" />
+  <meta property="og:description" content="Privacy Policy for Own Ya Life." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Own Ya Life" />
+
+  <!-- ─── TWITTER CARD ─── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy | Own Ya Life" />
+  <meta name="twitter:description" content="Privacy Policy for Own Ya Life." />
+  <meta name="twitter:image" content="og-image.png" />
+
+  <!-- ─── OYL TYPEKIT FONTS ─── -->
+  <link rel="stylesheet" href="https://use.typekit.net/wpi8wti.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --black:      #000000;
+      --white:      #ffffff;
+      --light-grey: #e0e0e0;
+      --mid-grey:   #888888;
+      --accent:     #FF005C;
+
+      --font-main: "akzidenz-grotesk-next", sans-serif;
+      --font-cond: "akzidenz-grotesk-next-conden", sans-serif;
+
+      --text-headline: clamp(1.6rem, 3.5vw, 2.4rem);
+      --text-large:    clamp(1rem, 1.8vw, 1.2rem);
+      --text-base:     1rem;
+      --text-small:    0.8rem;
+
+      --container: 720px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-main);
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: var(--white);
+      border-bottom: 1px solid var(--light-grey);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-back {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--black);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .nav-back:hover {
+      color: var(--accent);
+    }
+
+    /* ─── MAIN CONTENT ─── */
+    main {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    .page-label {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .page-title {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      font-weight: 700;
+      line-height: 1.2;
+      text-transform: uppercase;
+      letter-spacing: -0.01em;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--light-grey);
+    }
+
+    .policy-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .policy-section-label {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--mid-grey);
+      margin-bottom: 0.75rem;
+    }
+
+    .policy-section p {
+      font-family: var(--font-cond);
+      font-size: var(--text-large);
+      line-height: 1.7;
+      color: var(--black);
+    }
+
+    .policy-list {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .policy-list li {
+      font-family: var(--font-cond);
+      font-size: var(--text-large);
+      line-height: 1.7;
+      padding-left: 1.4rem;
+      position: relative;
+    }
+
+    .policy-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 2px;
+      background: var(--accent);
+    }
+
+    .policy-contact {
+      margin-top: 1rem;
+      display: inline-block;
+      font-family: var(--font-cond);
+      font-size: var(--text-large);
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .policy-contact:hover {
+      border-color: var(--accent);
+    }
+
+    .policy-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin: 2.5rem 0;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--black);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    .footer-brand {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-legal {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      color: #aaaaaa;
+      line-height: 1.8;
+    }
+
+    .footer-legal a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer-legal a:hover {
+      text-decoration: underline;
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 600px) {
+      nav {
+        padding: 1rem 1.25rem;
+      }
+
+      main {
+        padding: 3.5rem 1.25rem 5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a class="nav-logo" href="index.html">
+      <img src="oyl-logo-nav-dark.svg" alt="Own Ya Life">
+    </a>
+    <a class="nav-back" href="index.html">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M11 7H3M6 4L3 7l3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+  </nav>
+
+  <!-- CONTENT -->
+  <main>
+
+    <p class="page-label">Legal</p>
+    <h1 class="page-title">Privacy Policy</h1>
+
+    <div class="policy-section">
+      <p>Own Ya Life ("we", "us", "our") respects your privacy. This policy explains what data we collect, how we use it, and your rights.</p>
+    </div>
+
+    <div class="policy-divider" aria-hidden="true"></div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">1. What we collect</p>
+      <p>We may collect:</p>
+      <ul class="policy-list">
+        <li>Name and email address (when you contact us or submit a form)</li>
+        <li>Any information you choose to provide in messages or submissions</li>
+        <li>Basic technical data (IP address, browser type) for site performance and security</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">2. How we use your data</p>
+      <p>We use your data to:</p>
+      <ul class="policy-list">
+        <li>Respond to enquiries</li>
+        <li>Manage general contact and project-related interest</li>
+        <li>Improve the website and user experience</li>
+        <li>Send updates only where you have chosen to receive them</li>
+      </ul>
+      <p>We do not sell your data.</p>
+    </div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">3. How your data is stored</p>
+      <ul class="policy-list">
+        <li>Form submissions may be processed via trusted third-party tools (e.g. Tally, Google Sheets)</li>
+        <li>Data is stored securely and only accessed where necessary</li>
+      </ul>
+    </div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">4. Third parties</p>
+      <p>We may use third-party services to operate the site (e.g. hosting, form handling). These providers process data on our behalf and are expected to meet standard data protection requirements.</p>
+    </div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">5. Your rights</p>
+      <p>You have the right to:</p>
+      <ul class="policy-list">
+        <li>Request access to your data</li>
+        <li>Request correction or deletion</li>
+        <li>Withdraw consent at any time</li>
+      </ul>
+      <p>To do so, contact: <a class="policy-contact" href="mailto:contact@ownyalife.com">contact@ownyalife.com</a></p>
+    </div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">6. Cookies</p>
+      <p>This site may use minimal cookies for basic functionality and performance. No aggressive tracking or profiling is used.</p>
+    </div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">7. Changes to this policy</p>
+      <p>We may update this policy from time to time. The latest version will always be available on this page.</p>
+    </div>
+
+    <div class="policy-divider" aria-hidden="true"></div>
+
+    <div class="policy-section">
+      <p class="policy-section-label">Contact</p>
+      <p>If you have any questions about this policy or your data:</p>
+      <a class="policy-contact" href="mailto:contact@ownyalife.com">contact@ownyalife.com</a>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-brand">Own Ya Life</p>
+      <p class="footer-legal">
+        &copy; 2026 Own Ya Life. All rights reserved.<br>
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:contact@ownyalife.com">contact@ownyalife.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Own Ya Life</title>
+  <meta name="description" content="Own Ya Life exists to ask the questions the system would rather you didn't." />
+
+  <!-- ─── FAVICON ─── -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+
+  <!-- ─── OPEN GRAPH ─── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Own Ya Life" />
+  <meta property="og:title" content="Own Ya Life" />
+  <meta property="og:description" content="Own Ya Life exists to ask the questions the system would rather you didn't." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Own Ya Life" />
+  <meta property="og:url" content="https://ownyalife.com" />
+
+  <!-- ─── TWITTER CARD ─── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Own Ya Life" />
+  <meta name="twitter:description" content="Own Ya Life exists to ask the questions the system would rather you didn't." />
+  <meta name="twitter:image" content="og-image.png" />
+
+  <!-- ─── OYL TYPEKIT FONTS ─── -->
+  <link rel="stylesheet" href="https://use.typekit.net/wpi8wti.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black:      #000000;
+      --white:      #ffffff;
+      --off-white:  #f5f5f5;
+      --light-grey: #e0e0e0;
+      --accent:     #FF005C;
+      --font-main:  "akzidenz-grotesk-next", sans-serif;
+      --font-cond:  "akzidenz-grotesk-next-conden", sans-serif;
+      --text-display:  clamp(3.5rem, 9vw, 7rem);
+      --text-headline: clamp(1.6rem, 3.5vw, 2.4rem);
+      --text-large:    clamp(1rem, 1.8vw, 1.2rem);
+      --text-base:     1rem;
+      --text-small:    0.8rem;
+      --section-pad:   6rem 2rem;
+      --container:     720px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--black); font-family: var(--font-main); font-size: 18px; line-height: 1.6; }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: var(--black);
+      border-bottom: 1px solid #222;
+    }
+    /* ── NAV LOGO: SVG mark replaces text ── */
+    .nav-logo {
+      display: flex; align-items: center; text-decoration: none;
+    }
+    .nav-logo img {
+      height: 38px; width: auto; display: block;
+    }
+    .nav-link {
+      font-family: var(--font-cond); font-size: var(--text-small); font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+      color: var(--white); transition: color 0.15s ease;
+    }
+    .nav-link:hover { color: var(--accent); }
+    .nav-cta {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none;
+      color: var(--white); background: transparent; border: 2px solid var(--white);
+      padding: 0.55rem 1.4rem;
+      transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+    .nav-cta:hover { background: var(--accent); border-color: var(--accent); }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative; min-height: 100vh;
+      display: flex; flex-direction: column; justify-content: center;
+      padding: 7rem 2rem 4rem;
+      background: var(--black); color: var(--white); overflow: hidden;
+    }
+    #hero::after {
+      content: ''; position: absolute; inset: -50%; width: 200%; height: 200%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.045; pointer-events: none; z-index: 0;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: var(--container); margin: 0 auto; width: 100%; }
+
+    .hero-eyebrow {
+      font-family: var(--font-cond); font-size: var(--text-small); font-weight: 700; letter-spacing: 0.3em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
+    }
+    .hero-title {
+      font-family: var(--font-main); font-size: var(--text-display); font-weight: 700;
+      line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; margin-bottom: 2rem;
+    }
+    .hero-title span { color: var(--accent); }
+    .hero-rule { width: 40px; height: 2px; background: var(--accent); margin: 0 0 2rem; }
+    .hero-question {
+      font-family: var(--font-main); font-size: var(--text-headline); font-weight: 400;
+      color: var(--white); max-width: 640px; line-height: 1.3; margin-bottom: 1.5rem;
+      border-left: 3px solid var(--accent); padding-left: 1.2rem;
+    }
+    .hero-desc {
+      font-family: var(--font-main); font-size: var(--text-large); font-weight: 400; color: var(--white);
+      max-width: 520px; line-height: 1.7; padding-left: calc(1.2rem + 3px);
+    }
+    .hero-scroll {
+      position: absolute; bottom: 2.5rem; left: 0; right: 0; margin: 0 auto; width: 40px;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--accent); font-family: var(--font-main); font-size: 2rem;
+      text-decoration: none; z-index: 1;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    /* ─── SECTIONS ─── */
+    section { padding: var(--section-pad); scroll-margin-top: 70px; }
+    .container { max-width: var(--container); margin: 0 auto; }
+    .section-label {
+      font-family: var(--font-cond); font-size: var(--text-small); font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 2rem;
+    }
+    .hook-statement {
+      margin-top: 2.5rem; font-family: var(--font-main); font-size: var(--text-large);
+      line-height: 1.7; color: var(--black); border-left: 3px solid var(--accent); padding-left: 1.5rem;
+    }
+    .hook-statement p + p { margin-top: 1.2em; }
+
+    /* ─── PROJECTS ─── */
+    #projects { background: var(--white); }
+
+    .projects-list { margin-top: 2.5rem; }
+
+    .project-item {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 2rem; padding: 1.5rem 0;
+      border-top: 1px solid var(--light-grey);
+      text-decoration: none; color: var(--black);
+      transition: all 0.2s;
+    }
+    .project-item:last-child { border-bottom: 1px solid var(--light-grey); }
+    .project-item:hover .project-name { color: var(--accent); }
+    .project-item:hover .project-arrow { color: var(--accent); }
+
+    .project-left { flex: 1; }
+
+    .project-tag {
+      font-family: var(--font-cond); font-size: var(--text-small); font-weight: 700;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.5rem;
+    }
+    .project-name {
+      font-family: var(--font-main); font-size: var(--text-headline);
+      font-weight: 700; text-transform: uppercase;
+      line-height: 1.1; letter-spacing: -0.01em;
+      margin-bottom: 0.3rem; transition: color 0.2s;
+    }
+    .project-desc {
+      font-family: var(--font-main); font-size: var(--text-large);
+      line-height: 1.5; color: #555;
+    }
+    .project-arrow {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 700;
+      letter-spacing: 0.15em; text-transform: uppercase; color: var(--black);
+      white-space: nowrap; transition: color 0.2s;
+    }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--black); padding: 3rem 2rem; text-align: center; }
+    .footer-inner { max-width: var(--container); margin: 0 auto; }
+    .footer-brand {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      letter-spacing: 0.25em; text-transform: uppercase; color: #aaaaaa; margin-bottom: 0.5rem;
+    }
+    .footer-strapline {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      color: var(--accent); line-height: 1.5; margin-bottom: 0.75rem;
+    }
+    .footer-legal {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      color: #aaaaaa; line-height: 1.8;
+    }
+    .footer-legal a { color: var(--accent); text-decoration: none; }
+    .footer-legal a:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      nav { padding: 1rem 1.25rem; }
+      #hero { padding: 5.5rem 1.25rem 5rem; }
+.project-item { flex-direction: column; gap: 1rem; }
+      .project-arrow { align-self: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <!-- ── NAV LOGO: OYL_Primary Logo white.svg → oyl-logo-nav.svg ── -->
+  <nav>
+    <div style="display:flex; gap:2rem; align-items:center;">
+      <a class="nav-logo" href="./index.html">
+        <img src="oyl-logo.svg" alt="Own Ya Life">
+      </a>
+      <a class="nav-link" href="#projects">Projects</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Born from Frustration. Fuelled by Rebellion.</p>
+      <h1 class="hero-title">Own <span>Ya</span><br>Life</h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-question">Life isn't something you earn. It's something you own.</p>
+    </div>
+    <a class="hero-scroll" href="#projects" aria-label="Scroll to content">&#8595;</a>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Projects</p>
+      <div class="hook-statement">
+        <p>Three projects. One mindset. No permission needed.</p>
+      </div>
+      <div class="projects-list">
+
+        <a class="project-item" href="./bmay/index.html">
+          <div class="project-left">
+            <p class="project-tag">Documentary Film</p>
+            <h2 class="project-name">Buy Me A Year</h2>
+            <p class="project-desc">A year of freedom. A lifetime of change.</p>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+
+        <a class="project-item" href="./sayrftf/index.html">
+          <div class="project-left">
+            <p class="project-tag">Documentary Film</p>
+            <h2 class="project-name">Serbia: Are You Ready for the Future?</h2>
+            <p class="project-desc">At the turn of the millennium, students used a music festival to challenge a regime. What happened to hope?</p>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+
+        <a class="project-item" href="./ryzeup/index.html">
+          <div class="project-left">
+            <p class="project-tag">Limited Edition · Wearable Art</p>
+            <h2 class="project-name">RyzeUp</h2>
+            <p class="project-desc">From the street. Not the system.</p>
+          </div>
+          <span class="project-arrow">→</span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <!-- ── FOOTER LOGO: OYL_Primary Logo Lockup + Tagline white.svg → oyl-logo-footer.svg ── -->
+  <footer id="contact">
+    <div class="footer-inner">
+      <p class="footer-brand">Own Ya Life</p>
+      <p class="footer-strapline">Born from Frustration. Fuelled by Rebellion.</p>
+      <p class="footer-legal">
+        &copy; 2026 Own Ya Life. All rights reserved.<br>
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:contact@ownyalife.com">contact@ownyalife.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

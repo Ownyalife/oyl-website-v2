@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buy Me A Year: A Year of Freedom. A Lifetime of Change.</title>
+  <meta name="description" content="What happens when survival is no longer the barrier to ambition? Buy Me A Year is a documentary-led social experiment giving people a year of real financial freedom." />
+
+  <!-- ─── FAVICON ─── -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+
+  <!-- ─── OPEN GRAPH ─── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Buy Me A Year" />
+  <meta property="og:title" content="Buy Me A Year: A Year of Freedom. A Lifetime of Change." />
+  <meta property="og:description" content="What happens when survival is no longer the barrier to ambition? A documentary social experiment by Own Ya Life." />
+  <meta property="og:image" content="../og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Buy Me A Year: A Year of Freedom. A Lifetime of Change." />
+  <meta property="og:url" content="https://buymeayear.com" />
+
+  <!-- ─── TWITTER CARD ─── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Buy Me A Year: A Year of Freedom. A Lifetime of Change." />
+  <meta name="twitter:description" content="What happens when survival is no longer the barrier to ambition? A documentary social experiment by Own Ya Life." />
+  <meta name="twitter:image" content="../og-image.png" />
+
+  <!-- ─── OYL TYPEKIT FONTS ─── -->
+  <link rel="stylesheet" href="https://use.typekit.net/wpi8wti.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Colours */
+      --black:       #000000;
+      --white:       #ffffff;
+      --off-white:   #f5f5f5;
+      --light-grey:  #e0e0e0;
+      --accent:      #FF005C;
+
+      /* Fonts */
+      --font-main: "akzidenz-grotesk-next", sans-serif;
+      --font-cond: "akzidenz-grotesk-next-conden", sans-serif;
+
+      /* Type scale — 5 sizes, used everywhere */
+      --text-display:  clamp(3.5rem, 9vw, 7rem);
+      --text-headline: clamp(1.6rem, 3.5vw, 2.4rem);
+      --text-large:    clamp(1rem, 1.8vw, 1.2rem);
+      --text-base:     1rem;
+      --text-small:    0.8rem;
+
+      /* Layout */
+      --section-pad:     6rem 2rem;
+      --container:       720px;
+      --container-narrow: 560px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      font-family: var(--font-main);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: var(--black);
+      border-bottom: 1px solid #222;
+    }
+
+    /* ── NAV LOGO: OYL mark (inverted/dark) links to OYL home ── */
+    .nav-logo {
+      display: flex; align-items: center; text-decoration: none;
+    }
+    .nav-logo img {
+      height: 38px; width: auto; display: block;
+    }
+
+    .nav-cta {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--white);
+      transition: color 0.15s ease;
+    }
+
+    .nav-cta:hover {
+      color: var(--accent);
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 2rem 7rem;
+      background: var(--black);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    /* Film grain overlay */
+    #hero::after {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.045;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-main);
+      font-size: var(--text-display);
+      font-weight: 700;
+      line-height: 0.9;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-main);
+      font-size: 0.7rem;
+      color: var(--white);
+      margin-top: 0.6rem;
+      margin-bottom: 2rem;
+      line-height: 1.2;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+    }
+
+    .hero-rule {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 0 2rem;
+    }
+
+    .hero-question {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      font-weight: 400;
+      color: var(--white);
+      max-width: 640px;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+    }
+
+    .hero-desc {
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      color: var(--white);
+      max-width: 520px;
+      line-height: 1.7;
+      padding-left: calc(1.2rem + 3px);
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 0; right: 0; margin: 0 auto; width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-family: var(--font-main);
+      font-size: 2rem;
+      text-decoration: none;
+      z-index: 1;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .hero-scroll:hover {
+      opacity: 0.7;
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: var(--section-pad);
+      scroll-margin-top: 70px;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    /* ─── HOOK ─── */
+    #hook {
+      background: var(--white);
+    }
+
+    .hook-lines p {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      line-height: 1.3;
+      margin-bottom: 0.3rem;
+    }
+
+    .hook-lines p:last-child {
+      margin-bottom: 0;
+    }
+
+    .hook-statement {
+      margin-top: 2.5rem;
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      line-height: 1.7;
+      color: var(--black);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.5rem;
+    }
+
+    /* ─── TWIST ─── */
+    #twist {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .twist-text {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      line-height: 1.4;
+    }
+
+    .twist-text span {
+      display: block;
+    }
+
+    .twist-final {
+      margin-top: 1.5rem;
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      color: var(--white);
+    }
+
+    /* ─── WHAT THIS IS ─── */
+    #what {
+      background: var(--white);
+    }
+
+    .what-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .what-item {
+      border-top: 2px solid var(--accent);
+      padding-top: 1.2rem;
+    }
+
+    .what-item .not {
+      font-family: var(--font-main);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 0.4rem;
+    }
+
+    .what-item .is {
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      font-weight: 400;
+    }
+
+    .what-body {
+      margin-top: 2.5rem;
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      line-height: 1.6;
+      color: var(--black);
+      max-width: var(--container-narrow);
+    }
+
+    /* ─── SECTION DIVIDER (within merged section) ─── */
+    .section-divider {
+      width: 100%;
+      height: 1px;
+      background: var(--light-grey);
+      margin: 3.5rem 0;
+    }
+
+    /* ─── DOCUMENTARY (content within #what) ─── */
+    .doc-intro {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      line-height: 1.4;
+      color: var(--black);
+      margin-bottom: 2.5rem;
+    }
+
+    .doc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .doc-list li {
+      font-family: var(--font-main);
+      font-size: var(--text-base);
+      color: var(--black);
+      border-left: 2px solid var(--accent);
+      padding-left: 1rem;
+      line-height: 1.6;
+    }
+
+    .doc-footer {
+      margin-top: 2.5rem;
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      color: var(--black);
+    }
+
+    /* ─── INVITE ─── */
+    #invite {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .invite-heading {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      font-weight: 400;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+    }
+
+    .invite-body {
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      color: var(--white);
+      max-width: 680px;
+      line-height: 1.7;
+    }
+
+    /* ─── REGISTER ─── */
+    #register {
+      background: var(--white);
+    }
+
+    /* Tally embed */
+    #register iframe {
+      display: block;
+      border: none;
+    }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--black); padding: 3rem 2rem; text-align: center; }
+    .footer-inner { max-width: var(--container); margin: 0 auto; }
+    .footer-brand {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      letter-spacing: 0.25em; text-transform: uppercase; color: #aaaaaa; margin-bottom: 0.5rem;
+    }
+    .footer-legal {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      color: #aaaaaa; line-height: 1.8;
+    }
+    .footer-legal a { color: var(--accent); text-decoration: none; }
+    .footer-legal a:hover { text-decoration: underline; }
+
+    /* ─── DIVIDER ─── */
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin: 2rem auto;
+    }
+
+    /* ─── TABLET ─── */
+    @media (max-width: 900px) {
+      :root {
+        --section-pad: 5rem 2rem;
+      }
+
+      .what-grid,
+      .doc-list {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 600px) {
+      :root {
+        --section-pad: 4rem 1.25rem;
+      }
+
+      nav {
+        padding: 1rem 1.25rem;
+      }
+
+      #hero {
+        justify-content: center;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+
+      .what-grid,
+      .doc-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <!-- ── NAV LOGO: OYL_Inverted Logo black.svg → oyl-logo-nav-dark.svg (black mark for white nav) ── -->
+    <div style="display:flex; gap:2rem; align-items:center;">
+      <a class="nav-logo" href="../index.html">
+        <img src="../oyl-logo.svg" alt="Own Ya Life">
+      </a>
+      <a class="nav-cta" href="../index.html#projects">Projects</a>
+    </div>
+    <a class="nav-cta" href="#register">Register Interest</a>
+  </nav>
+
+  <!-- SECTION 1 — HERO -->
+  <section id="hero">
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">A Documentary Film</p>
+      <h1 class="hero-title">Buy Me<br>A <span style="color:var(--accent);letter-spacing:0.05em;font-kerning:none;">Year</span></h1>
+      <p class="hero-subtitle">A year of freedom. A lifetime of change.</p>
+      <div class="hero-rule" style="margin-top:1.8rem;" aria-hidden="true"></div>
+      <p class="hero-question">What happens when survival is no longer the barrier to ambition?</p>
+      <p class="hero-desc">Buy Me A Year is a documentary-led social experiment providing ordinary people with an extraordinary opportunity. A year of financial freedom to explore what they choose, not what they need.</p>
+    </div>
+
+    <a class="hero-scroll" href="#hook" aria-label="Scroll to content">&#8595;</a>
+  </section>
+
+  <!-- SECTION 2 — CORE HOOK -->
+  <section id="hook">
+    <div class="container">
+      <p class="section-label">The Idea</p>
+      <div class="hook-lines">
+        <p>Most people don't lack ambition.</p>
+        <p>They lack time, space, and security.</p>
+        <p>We're removing that.</p>
+      </div>
+      <div class="hook-statement">
+        <p>A select group of participants will receive a year of financial freedom, replacing the need to work, survive, or justify their time. No expectations. No guarantees. No script.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — THE TWIST -->
+  <section id="twist">
+    <div class="container">
+      <p class="section-label">The Twist</p>
+      <div class="twist-text">
+        <span>When survival disappears, something else takes its place.</span>
+      </div>
+      <div class="divider" style="margin: 2rem 0;"></div>
+      <p class="twist-final">Pressure. Doubt. Possibility. And sometimes… paralysis.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — WHAT THIS IS -->
+  <section id="what">
+    <div class="container">
+      <p class="section-label">What This Is</p>
+      <div class="what-grid">
+        <div class="what-item">
+          <p class="not">Not a</p>
+          <p class="is">Giveaway.</p>
+        </div>
+        <div class="what-item">
+          <p class="not">Not a</p>
+          <p class="is">Competition.</p>
+        </div>
+        <div class="what-item">
+          <p class="not">It's a</p>
+          <p class="is">Real-world experiment.</p>
+        </div>
+      </div>
+      <p class="what-body">
+        What happens when you remove the single biggest constraint on human potential?
+      </p>
+
+      <div class="section-divider"></div>
+
+      <p class="section-label">The Documentary</p>
+      <p class="doc-intro">
+        We'll follow each participant over the year.
+      </p>
+      <ul class="doc-list">
+        <li>The decisions they make</li>
+        <li>The risks they take</li>
+        <li>What they pursue or walk away from</li>
+      </ul>
+      <p class="doc-footer">Some will thrive. Some will struggle. All of it is real.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — THE INVITE -->
+  <section id="invite">
+    <div class="container">
+      <p class="section-label">Be Part of It</p>
+      <h2 class="invite-heading">This is just the beginning.</h2>
+      <div class="divider" style="margin: 2rem 0;"></div>
+      <p class="invite-body">
+        We're currently gathering expressions of interest from people who want to be part of the experiment as it unfolds.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — REGISTER -->
+  <section id="register">
+    <div class="container">
+      <p class="section-label">Register Your Interest</p>
+      <iframe data-tally-src="https://tally.so/embed/RGLpyQ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="BMAY – Register Interest"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-brand">Buy Me A Year</p>
+      <p class="footer-legal">
+        A documentary-led social experiment from <a href="https://ownyalife.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Own Ya Life</a><br>
+        &copy; 2026 Own Ya Life. All rights reserved.<br>
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:contact@ownyalife.com">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

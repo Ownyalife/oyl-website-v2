@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serbia: Are You Ready for the Future? | Own Ya Life</title>
+  <meta name="description" content="At the turn of the millennium, students in Novi Sad used a music festival to challenge a regime and inspired a generation. Twenty-five years later, students are back on the streets." />
+
+  <!-- ─── OPEN GRAPH ─── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Serbia: Are You Ready for the Future?" />
+  <meta property="og:title" content="Serbia: Are You Ready for the Future? | Own Ya Life" />
+  <meta property="og:description" content="At the turn of the millennium, students in Novi Sad used a music festival to challenge a regime and inspired a generation. A documentary film by Own Ya Life." />
+  <meta property="og:image" content="../og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Serbia: Are You Ready for the Future?" />
+
+  <!-- ─── TWITTER CARD ─── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Serbia: Are You Ready for the Future? | Own Ya Life" />
+  <meta name="twitter:description" content="At the turn of the millennium, students in Novi Sad used a music festival to challenge a regime and inspired a generation. A documentary film by Own Ya Life." />
+  <meta name="twitter:image" content="../og-image.png" />
+
+  <!-- ─── FAVICON ─── -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png" />
+
+  <!-- ─── OYL TYPEKIT FONTS ─── -->
+  <link rel="stylesheet" href="https://use.typekit.net/wpi8wti.css">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      /* Colours */
+      --black:       #000000;
+      --white:       #ffffff;
+      --off-white:   #f5f5f5;
+      --light-grey:  #e0e0e0;
+      --accent:      #FF005C;
+
+      /* Fonts */
+      --font-main: "akzidenz-grotesk-next", sans-serif;
+      --font-cond: "akzidenz-grotesk-next-conden", sans-serif;
+
+      /* Type scale — 5 sizes, used everywhere */
+      --text-display:  clamp(3.5rem, 9vw, 7rem);
+      --text-headline: clamp(1.6rem, 3.5vw, 2.4rem);
+      --text-large:    clamp(1rem, 1.8vw, 1.2rem);
+      --text-base:     1rem;
+      --text-small:    0.8rem;
+
+      /* Layout */
+      --section-pad:      6rem 2rem;
+      --container:        720px;
+      --container-narrow: 560px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--white);
+      color: var(--black);
+      font-family: var(--font-main);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* ─── NAV ─── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2.5rem;
+      background: var(--black);
+      border-bottom: 1px solid #222;
+    }
+
+    /* ── NAV LOGO: OYL mark (inverted/dark) links to OYL home ── */
+    .nav-logo {
+      display: flex; align-items: center; text-decoration: none;
+    }
+    .nav-logo img {
+      height: 38px; width: auto; display: block;
+    }
+
+    .nav-cta {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--white);
+      transition: color 0.15s ease;
+    }
+
+    .nav-cta:hover {
+      color: var(--accent);
+    }
+
+    /* ─── HERO ─── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 2rem 7rem;
+      background: var(--black);
+      color: var(--white);
+      overflow: hidden;
+    }
+
+    /* Film grain overlay */
+    #hero::after {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)'/%3E%3C/svg%3E");
+      opacity: 0.045;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: var(--container);
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .hero-title-film {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15em;
+      letter-spacing: -0.02em;
+      margin-bottom: 2rem;
+    }
+
+    .title-large {
+      font-size: clamp(3.2rem, 7vw, 6rem);
+      line-height: 0.95;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .title-small {
+      font-size: clamp(1.2rem, 2.8vw, 2.2rem);
+      line-height: 1.0;
+      font-weight: 700;
+      text-transform: uppercase;
+      word-spacing: 0.2em;
+    }
+
+    .hero-title-film .word-accent {
+      color: var(--accent);
+    }
+
+
+    .hero-eyebrow {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-main);
+    }
+
+    .hero-rule {
+      width: 40px;
+      height: 2px;
+      background: var(--accent);
+      margin: 0 0 2rem;
+    }
+
+    .hero-question {
+      font-family: var(--font-main);
+      font-size: var(--text-headline);
+      font-weight: 400;
+      color: var(--white);
+      max-width: 640px;
+      line-height: 1.3;
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1.2rem;
+    }
+
+    .hero-desc {
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      color: var(--white);
+      max-width: 520px;
+      line-height: 1.7;
+      padding-left: calc(1.2rem + 3px);
+    }
+
+    .hero-closer {
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      font-weight: 400;
+      color: var(--white);
+      padding-left: calc(1.2rem + 3px);
+      margin-top: 0;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 0; right: 0; margin: 0 auto; width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-family: var(--font-main);
+      font-size: 2rem;
+      text-decoration: none;
+      z-index: 1;
+      animation: pulse 2.5s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+    .hero-scroll:hover {
+      opacity: 0.7;
+    }
+
+    /* ─── SECTIONS ─── */
+    section {
+      padding: var(--section-pad);
+      scroll-margin-top: 70px;
+    }
+
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-cond);
+      font-size: var(--text-small);
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .hook-statement {
+      margin-top: 2.5rem;
+      font-family: var(--font-main);
+      font-size: var(--text-large);
+      line-height: 1.7;
+      color: var(--black);
+      border-left: 3px solid var(--accent);
+      padding-left: 1.5rem;
+    }
+
+    .hook-statement p + p {
+      margin-top: 1.2em;
+    }
+
+    /* ─── ABOUT THE FILM ─── */
+    #about {
+      background: var(--white);
+    }
+
+    #whynow .hook-statement { color: var(--white); }
+    #creators-note .hook-statement { color: var(--black); }
+    #contact .hook-statement { color: var(--black); }
+
+    /* ─── WHY NOW ─── */
+    #whynow {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* ─── CREATOR'S NOTE ─── */
+    #creators-note {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    #creators-note .hook-statement {
+      color: var(--black);
+    }
+
+    /* ─── THE FILM ─── */
+    #thefilm {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    #thefilm .hook-statement { color: var(--white); }
+
+    /* ─── GET IN TOUCH ─── */
+    #contact {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    /* ─── FOOTER ─── */
+    footer { background: var(--black); padding: 3rem 2rem; text-align: center; }
+    .footer-inner { max-width: var(--container); margin: 0 auto; }
+    .footer-brand {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      letter-spacing: 0.25em; text-transform: uppercase; color: #aaaaaa; margin-bottom: 0.5rem;
+    }
+    .footer-legal {
+      font-family: var(--font-main); font-size: var(--text-small); font-weight: 400;
+      color: #aaaaaa; line-height: 1.8;
+    }
+    .footer-legal a { color: var(--accent); text-decoration: none; }
+    .footer-legal a:hover { text-decoration: underline; }
+
+    /* ─── TABLET ─── */
+    @media (max-width: 900px) {
+      :root {
+        --section-pad: 5rem 2rem;
+      }
+    }
+
+    /* ─── MOBILE ─── */
+    @media (max-width: 600px) {
+      :root {
+        --section-pad: 4rem 1.25rem;
+      }
+
+      nav { padding: 1rem 1.25rem; }
+
+      #hero { padding: 5.5rem 1.25rem 5rem; }
+
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <!-- ── NAV LOGO: OYL_Inverted Logo black.svg → oyl-logo-nav-dark.svg (black mark for white nav) ── -->
+    <div style="display:flex; gap:2rem; align-items:center;">
+      <a class="nav-logo" href="../index.html">
+        <img src="../oyl-logo.svg" alt="Own Ya Life">
+      </a>
+      <a class="nav-cta" href="../index.html#projects">Projects</a>
+    </div>
+    <a class="nav-cta" href="#contact">Get In Touch</a>
+  </nav>
+
+  <!-- SECTION 1 — HERO -->
+  <section id="hero">
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">A Documentary Film</p>
+      <h1 class="hero-title hero-title-film">
+        <span class="title-large" style="color:var(--white);">Serbia:</span>
+        <span class="title-small">Are You Ready For The</span>
+        <span class="title-large word-accent">Future?</span>
+      </h1>
+      <div class="hero-rule" aria-hidden="true"></div>
+      <p class="hero-question">At the turn of the millennium, students in Novi Sad used a music festival to challenge a regime and inspired a generation. Twenty-five years later, students are back on the streets.</p>
+      <p class="hero-closer">What happened to the hope?</p>
+    </div>
+
+    <a class="hero-scroll" href="#about" aria-label="Scroll to content">&#8595;</a>
+  </section>
+
+  <!-- SECTION 2 — ABOUT THE FILM -->
+  <section id="about">
+    <div class="container">
+      <p class="section-label">About the Film</p>
+      <div class="hook-statement">
+        <p>EXIT Festival was born in 1999 as a student movement against a regime. It became part of a wider wave of resistance that helped shape the atmosphere for political change.</p>
+        <p>Within a decade, EXIT had grown into one of Europe's leading music festivals, drawing artists and audiences from across the world.</p>
+        <p>In November 2024, the collapse of a newly renovated train station canopy in Novi Sad reignited student anger and brought a new generation back onto the streets.</p>
+        <p>This film is not a celebration of EXIT. It uses EXIT as a lens to understand what a generation fought for, what they built, and what may have been left unfinished.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — WHY NOW -->
+  <section id="whynow">
+    <div class="container">
+      <p class="section-label">Why Now</p>
+      <div class="hook-statement">
+        <p>More than two decades after EXIT asked its question, Serbia is asking it again.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4B — CREATOR'S NOTE -->
+  <section id="creators-note">
+    <div class="container">
+      <p class="section-label">Creator's Note</p>
+      <div class="hook-statement">
+        <p>In the summer of 2002, I left the UK for Serbia to promote a rave, arriving in Belgrade with a suitcase full of vinyl, rare in the city at the time, sold out of a small café to help fund the trip, and no real sense of what to expect.</p>
+        <p>Serbia was not a place people around me understood, and it was not somewhere they expected me to go. What I found there would shape my perspective on culture, politics, and the power of collective action for decades to come.</p>
+        <p>I kept coming back. Over the years, I have built friendships, witnessed the country's evolution first-hand, and watched its social and political landscape shift in real time.</p>
+        <p>This is not the perspective of a foreign correspondent parachuting in. It comes from someone who stayed.</p>
+        <p>This film is not a retrospective. It is a reckoning. The question EXIT asked in 1999 is the same question Serbia is asking again today.</p>
+        <p>A quarter of a century has been spent trying to understand the answer. This is an attempt to put it on record.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — THE FILM -->
+  <section id="thefilm">
+    <div class="container">
+      <p class="section-label">The Film</p>
+      <div class="hook-statement">
+        <p>A 60-minute documentary for broadcast, with a 90-minute festival cut, filmed in Belgrade and Novi Sad with additional material captured outside Serbia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — GET IN TOUCH -->
+  <section id="contact">
+    <div class="container">
+      <p class="section-label">Get In Touch</p>
+      <div class="hook-statement">
+        <p>Serbia: Are You Ready for the Future? is currently in development. We are seeking a UK or European co-production partner and broadcaster for the 60-minute cut.</p>
+        <p>If you are a broadcaster, producer, festival programmer, or press, get in touch.</p>
+      </div>
+
+      <!-- Tally contact form — replace SAYRFTF_FORM_ID with your Tally form ID -->
+      <iframe data-tally-src="https://tally.so/embed/ODjAKM?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0" title="SAYRFTF – Get In Touch"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <p class="footer-brand">Serbia: Are You Ready for the Future?</p>
+      <p class="footer-legal">
+        A documentary film from <a href="https://ownyalife.com" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:none;">Own Ya Life</a><br>
+        &copy; 2026 Own Ya Life. All rights reserved.<br>
+        <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp; <a href="mailto:contact@ownyalife.com">Contact</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
