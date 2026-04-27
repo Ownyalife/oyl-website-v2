@@ -198,7 +198,8 @@
     @media (max-width: 600px) {
       nav { padding: 1rem 1.25rem; }
       #hero { padding: 5.5rem 1.25rem 5rem; }
-      .project-item { flex-direction: column; gap: 0.5rem; }
+      .project-item { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+      .project-left { width: 100%; }
       .project-arrow { display: none; }
     }
   </style>
@@ -257,7 +258,7 @@
         <a class="project-item" href="./ryzeup/index.html">
           <div class="project-left">
             <p class="project-tag">Limited Edition · Wearable Art</p>
-            <h2 class="project-name">RyzeUp</h2>
+            <h2 class="project-name" style="text-transform: none;">RyzeUp</h2>
             <p class="project-desc">From the street. Not the system.</p>
           </div>
           <span class="project-arrow">→</span>
